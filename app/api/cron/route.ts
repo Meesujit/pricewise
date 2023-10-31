@@ -4,6 +4,10 @@ import { scrapeAmazonProduct } from "@/lib/scraper";
 import { connectToDB } from "@/lib/scraper/mongoose"
 import { getAveragePrice, getEmailNotifType, getHighestPrice, getLowestPrice } from "@/lib/utils";
 import { NextRequest, NextResponse } from "next/server";
+
+export const maxDuration = 300; // 5 min
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 export async function get() {
     try {
         
@@ -32,7 +36,7 @@ export async function get() {
                 
             
                 const updatedProduct = await Product.findOneAndUpdate(
-                  { url: scrapedProduct.url },
+                  { url: product.url },
                   product,
                   
                 );
