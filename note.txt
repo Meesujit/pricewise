@@ -1,0 +1,6 @@
+03.42.52
+
+
+rQ8jIScJCAol7j97
+
+mongodb+srv://pricewise:rQ8jIScJCAol7j97@cluster0.bjxzksu.mongodb.net/?retryWrites=true&w=majority
